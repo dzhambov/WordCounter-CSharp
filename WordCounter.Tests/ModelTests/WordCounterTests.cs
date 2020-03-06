@@ -23,5 +23,13 @@ namespace WordCounter.Tests
       Assert.AreEqual("car", inputWord);
     }
 
+    [TestMethod]
+    public void RepeatCounter_SampleSentence_SentenceInput()
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter();
+      string inputSentence = newRepeatCounter.SampleSentence("This is my car");
+      Assert.AreEqual("This is my car", inputSentence);
+    }
+
   }
 }
