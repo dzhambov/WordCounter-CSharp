@@ -6,12 +6,13 @@ namespace WordCounter.Tests
 {
   //change name of test class.
   [TestClass]
-  public class ChangeNameOfClassTests
+  public class RepeatCounterTests
   {
     [TestMethod]
-    public void MethodName_WhatItDoes_ReturnObject()
+    public void RepeatCounter_UserWordCounter_Word()
     {
-
+      RepeatCounter newRepeatCounter = new RepeatCounter();
+      Assert.AreEqual(typeof(RepeatCounter), newRepeatCounter.GetType());
     }
 
   }
