@@ -2,14 +2,12 @@ using System;
 
 namespace WordCounter.Models
 {
-  //change name of class.
-  class ChangeNameOfClass
+  public class RepeatCounter
   {
-    //Change the name of the method.
-    public static void TempMethod()
+    public static string UserWord(string word)
     {
-
+      
     }
-  }
 
+  }
 }
