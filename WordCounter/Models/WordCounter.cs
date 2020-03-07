@@ -7,7 +7,7 @@ namespace WordCounter.Models
     public string UserWord { get; set; }
     public string UserSentence { get; set; }
 
-    public void UserWordCounter(string word, string sentence)
+    public  RepeatCounter(string word, string sentence)
     {
       UserWord = word;
       UserSentence = sentence;
