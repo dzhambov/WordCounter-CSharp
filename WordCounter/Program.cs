@@ -9,12 +9,13 @@ namespace WordCounter
     {
      Console.Clear();
      Console.ForegroundColor = ConsoleColor.DarkYellow;
-     TypeLine("Hello Word Contre");
+     TypeLine("Hello Word Conter");
      TypeLine("To start playing first enter a word");
      string word = Console.ReadLine();
      Console.ForegroundColor = ConsoleColor.DarkGreen;
      TypeLine("Now enter a sentence");
      string sentence = Console.ReadLine();
+     int countWord = repeatCounter.RepeatWord();
     }
     public static void TypeLine(string input)
       {

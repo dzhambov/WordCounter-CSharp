@@ -11,12 +11,7 @@ namespace WordCounter.Models
     {
       UserWord = word;
       UserSentence = sentence;
-      int countWord = 0;
-      // foreach(string sent in sentence)
-      // {
-      //   countWord++;
-      // }
-      // return countWord;
+      
     }
 
     public string SampleWord(string word)
@@ -31,9 +26,24 @@ namespace WordCounter.Models
       return inputSentence;
     }
 
-    public static string[] SplitSentence(string sentence)
+    public static string[] SentenceArr(string sentence)
     {
-      return sentence.Split(" ");
+      string[] userSentenceArr = sentence.Split(" ");
+      return userSentenceArr;
+    }
+
+    public int RepeatWord()
+    {
+      string[] userSentenceArr = SentenceArr(UserSentence);
+      int countWord = 0;
+      foreach(string word in userSentenceArr)
+      {
+        if(word.Contains(UserWord))
+        {
+          countWord += 1;
+        }
+      }
+      return countWord;
     }
     
     
