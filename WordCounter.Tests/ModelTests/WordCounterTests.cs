@@ -14,7 +14,7 @@ namespace WordCounter.Tests
     // }
 
     [TestMethod]
-    public void RepeatCounter_SampleWord_WordInput()
+    public void RepeatCounter_VerifyUserInputIsWord_Word()
     {
       RepeatCounter newRepeatCounter = new RepeatCounter();
       string inputWord = newRepeatCounter.SampleWord("car");
