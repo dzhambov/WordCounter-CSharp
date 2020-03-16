@@ -14,6 +14,10 @@ namespace WordCounter.Models
       
     }
 
+    public RepeatCounter()
+    {
+    }
+
     public string SampleWord(string word)
     {
       string inputWord = word;
@@ -38,7 +42,7 @@ namespace WordCounter.Models
       int countWord = 0;
       foreach(string word in userSentenceArr)
       {
-        if(word.Contains(UserWord))
+        if(word == UserWord)
         {
           countWord += 1;
         }
