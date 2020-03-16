@@ -29,5 +29,15 @@ namespace WordCounter.Tests
       Assert.AreEqual("This is my car", inputSentence);
     }
 
+    [TestMethod]
+    public void RepeatCounter_TestForMultipleWords_MultipleWords()
+    {
+      string userWord = "car";
+      string userSentence = "This car is my car";
+      RepeatCounter newRepeatCounter = new RepeatCounter(userWord, userSentence);
+      int countWord = newRepeatCounter.RepeatWord();
+      Assert.AreEqual(2, countWord);
+    }
+
   }
 }
