@@ -6,13 +6,6 @@ namespace WordCounter.Tests
   [TestClass]
   public class RepeatCounterTests
   {
-    // [TestMethod]
-    // public void RepeatCounterConstructor_InstancesOfRepeatCounter_RepeatCounter()
-    // {
-    //   RepeatCounter newRepeatCounter = new RepeatCounter();
-    //   Assert.AreEqual(typeof(RepeatCounter), newRepeatCounter.GetType());
-    // }
-
     [TestMethod]
     public void RepeatCounter_VerifyUserInputIsWord_Word()
     {
@@ -22,11 +15,11 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void RepeatCounter_SampleSentence_SentenceInput()
+    public void RepeatCounter_SampleSentence_Sentence()
     {
       RepeatCounter newRepeatCounter = new RepeatCounter();
-      string inputSentence = newRepeatCounter.SampleSentence("This is my car");
-      Assert.AreEqual("This is my car", inputSentence);
+      string inputSentence = newRepeatCounter.SampleSentence("This is my car.");
+      Assert.AreEqual("This is my car.", inputSentence);
     }
 
     [TestMethod]
@@ -38,6 +31,14 @@ namespace WordCounter.Tests
       int countWord = newRepeatCounter.RepeatWord();
       Assert.AreEqual(2, countWord);
     }
-
+    [TestMethod]
+    public void RepeatCounter_TestForPartialRegister_Word()
+    {
+      string userWord = "car";
+      string userSentence = "Be carful what you wish for";
+      RepeatCounter newRepeatCounter = new RepeatCounter(userWord, userSentence);
+      int countWord = newRepeatCounter.RepeatWord();
+      Assert.AreEqual(0, countWord);
+    }
   }
 }
